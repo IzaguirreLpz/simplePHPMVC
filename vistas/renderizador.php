@@ -45,7 +45,7 @@ function render(&$str, $datos, $base = false){
 }
 
 function limpiar(&$str){
-    //limpiando cualquier foreach
+    
     $posstarter = false;
     do{
         $posstarter = strpos($str,"{{foreach");
@@ -57,7 +57,7 @@ function limpiar(&$str){
             $str = substr_replace($str,"",$posstarter, $posEnderLast - $posstarter);
         }
     }while($posstarter);
-    //limpiando cualquier etiqueta
+    
     $posstarter = false;
     do{
         $posstarter = strpos($str,"{{");
